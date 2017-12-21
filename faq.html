@@ -6,9 +6,12 @@
   <body>
     <a href="index.html">&larr; back</a>
     <h1>How does share creation work?</h1>
-    <p><em>Endure</em> generates a seed in your browser. It then uses Shamir Secret Sharing to split
-      it into 9 shares. Finally, it converts each share to mnemonic words and renders ready-to-print
-      files.</p>
+    <p><em>Endure</em> generates a seed in your browser. The seed is then split into 9 shares using
+      <a href="https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing">Shamir's Secret Sharing</a>. Finally, the binary
+      data is converted to <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">mnemonic words</a>
+      and rendered as ready-to-print files.</p>
+    <p>Any 3 shares can be combined to form the original seed. It is recommended to use
+      <a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki">HD wallets</a> derived from the seed.</p>
     <p>The code is pure javascript and has a minimal footprint. It was designed to be easy to audit. Seed
     generation happens in your browser and never leaves your computer.</p>
 
