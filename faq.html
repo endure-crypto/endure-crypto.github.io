@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="endure.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <a href="index.html">&larr; back</a>
+    <h1>How does share creation work?</h1>
+    <p><em>Endure</em> generates a seed in your browser. It then uses Shamir Secret Sharing to split
+      it into 9 shares. Finally, it converts each share to mnemonic words and renders ready-to-print
+      files.</p>
+    <p>The code is pure javascript and has a minimal footprint. It was designed to be easy to audit. Seed
+    generation happens in your browser and never leaves your computer.</p>
+
+    <h1>How should I distribute the 9 shares?</h1>
+    <ul>
+      <li>Save 3 shares in 3 different locations for your own use (e.g. your home, your bag and your work).</li>
+      <li>Ask 3 trusted friends or family members who live close to you to hold on to a share each.</li>
+      <li>Finally, ask 3 friends or family members who live further away to hold on to the remaining shares.</li>
+    </ul>
+
+    <h1>How will people know how to use the shares?</h1>
+    <p><em>Endure</em> provides a template you can use to print each share. The template contains instructions
+      which have been tested with non-technical people. You may tweak the instructions to meet your specific needs.</p>
+
+    <h1>One or more shares were lost, what should I do?</h1>
+    <ul>
+      <li>Gather 3 of the remaining shares.</li>
+      <li>Recover the seed and the wallets.</li>
+      <li>Create a new seed and new wallets. You'll have 9 new shares.</li>
+      <li>Transfer your funds from the old wallets to the new wallets. Keep in mind that forks can result in your funds
+        being available on different chains.</li>
+      <li>Redistribute the 9 new shares.</li>
+    </ul>
+
+    <h1>Should I keep funds with an exchange?<div><small>(such as Coinbase, Square Cash, etc.)</small></div></h1>
+    <p>Managing cryptocurrency wallets yourself or outsourcing it to an external entity involves various tradeoffs.</p>
+    <p>The benefits of using a centralized exchange is that they might dedicate more resources to securely storing your
+      assets than you can achieve yourself. In the past, many cryptocurrency institutions have lost their customers'
+      funds with no hope of recovery. Which begs the question of whether trusting central entities defeats the purpose
+      of a decentralized blockchain.</p>
+
+    <h1>Is MultiSig better than Shamir Secret Sharing?</h1>
+    <p>P2SH multisig transactions can achieve similar goals as Shamir Secret Sharing. The author however feels that
+      getting multisig transactions right is more complicated. Shamir Secret Sharing can be used with existing wallets.
+      In addition, the funds are not revealed until the shares are combined.
+    </p>
+
+    <h1>Going the extra-mile.</h1>
+    <ul>
+      <li>When handling cryptocurrency, always use a secure device. E.g. wipe your phone before and after generating the
+        shares.</li>
+      <li>To reduce the risk of compromised printers, you can print blank templates and handwrite the shares.</li>
+      <li>Hand people their shares on a USB drive (pdf file) as well as a paper copy.</li>
+    </ul>
+
+    <h1>Tell me more...</h1>
+    <ul>
+      <li>JavaScript is ubiquitous. This code is likely to work unchanged many years from now.</li>
+      <li>The code is very minimal. The target is to keep it under 1000 LOC.</li>
+      <li>The code is thoroughly commented.</li>
+      <li>Unittests exercise every line of code.</li>
+      <li>Defensive coding techniques were applied. For example, when generating the shares, the code verifies
+        all permutations can be used to re-create the original seed.</li>
+      <li>The author picked 3 shares among 9 but these values are configurable.</li>
+    </ul>
+  </body>
+</html>

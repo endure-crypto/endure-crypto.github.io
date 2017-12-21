@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+  color: #025;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 2em 0;
+}
+
+ul {
+  padding-left: 1em;
+}
+
+button { margin-right: 20px }
+
+.overview {
+  font-size: 2em;
+  max-width: 45em;
+  margin: 0 auto;
+}
+
+.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+.create {
+  padding-top: 2em;
+}
+
+.create div {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.create span {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
