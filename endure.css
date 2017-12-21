@@ -10,7 +10,12 @@ ul {
   padding-left: 1em;
 }
 
-button { margin-right: 20px }
+h1 {
+  padding-top: 1em;
+  margin: 0;
+  border-bottom: 1px solid black;
+  font-weight: normal;
+}
 
 .overview {
   font-size: 2em;
@@ -18,10 +23,29 @@ button { margin-right: 20px }
   margin: 0 auto;
 }
 
-.button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
+.overview button {
+  margin-right: 20px;
+  padding: 40px;
+}
+
+#onlineCheckResult {
+  -webkit-transition: opacity 0.5s ease-in;
+   -moz-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+     -o-transition: opacity 0.5s ease-in;
+        transition: opacity 0.5s ease-in;
+}
+
+.error {
+  border-left: 2px solid red;
+  white-space: pre;
+  padding-left: 1em;
+}
+
+.mnemonic {
+  border: 1px solid black;
+  font-family: monospace;
+  text-align: center;
 }
 
 .create {

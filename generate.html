@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="endure.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <a href="index.html">&larr; back</a>
+    <h1>Seed generation</h1>
+    <ul>
+      <li>Before generating a wallet, you should securely wipe (i.e. factory reset) your device.</li>
+      <li id="onlineCheckResult">It seems that you are online. You should disable your network connections.</li>
+    </ul>
+
+    <div class="mnemonic">
+      <table width="100%">
+        <tr><td>segment</td><td>answer</td><td>must</td><td>disease</td><td>debate</td><td>poverty</td><td>print</td><td>skill</td><td>program</td><td>truck</td><td>alley</td><td>champion</td></tr>
+        <tr style="color: #ccc; font-size: small"><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+      </table>
+
+    </div>
+
+    <script src="bip39_wordlist_english.js"></script>
+    <script src="endure.js"></script>
+    <button onClick="handleGenerate(); return false;">Generate a seed</button>
+    <p></p>
+    <div id="generateResult"></div>
+    <script>
+      // Check every 1s if the browser is offline. Update opacity of #onlineCheckResult accordingly.
+      setInterval(() => onlineCheckResult.style.opacity = navigator.onLine|0, 1000);
+    </script>
+  </body>
+  </html>
