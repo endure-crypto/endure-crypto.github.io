@@ -6,6 +6,10 @@ body {
   padding: 2em 0;
 }
 
+.main {
+  max-width: inherit;
+}
+
 ul {
   padding-left: 1em;
 }
@@ -13,19 +17,49 @@ ul {
 h1 {
   padding-top: 1em;
   margin: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #2176AE;
   font-weight: normal;
+  color: #2176AE;
 }
 
 .overview {
   font-size: 2em;
-  max-width: 45em;
+  background-color: #f8f8f8;
+  margin-bottom: 1em;
+}
+
+.overview > div {
+  width: 25em;
+  max-width: 50em;
+  padding: 0.5em;
   margin: 0 auto;
 }
 
-.overview button {
+.button1 {
   margin-right: 20px;
-  padding: 40px;
+  padding: 20px 10px;
+  color: #2176AE;
+  border: 2px solid #2176AE;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 999px;
+  letter-spacing: 1px;
+  width: 200px;
+}
+
+.button2 {
+  margin-right: 20px;
+  padding: 20px 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  background-color: #2176AE;
+  border: 0;
+  cursor: pointer;
+  border-radius: 999px;
+  letter-spacing: 1px;
+  width: 200px;
 }
 
 #onlineCheckResult {
